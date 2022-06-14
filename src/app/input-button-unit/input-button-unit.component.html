@@ -1,4 +1,4 @@
-<input #inputElementRef [value] = "title" (keyup.enter)="submitValue($event.target.value) ">
-  <button type = "button"  (click) = "submitValue(inputElementRef.value)"> Save </button>
+<input class="todo-input" #inputElementRef [value] = "title" (keyup.enter)="submitValue($event.target.value) ">
+  <button type = "button" class="btn"  (click) = "submitValue(inputElementRef.value)"> Save </button>
 
 <h4> {{title}}</h4>
