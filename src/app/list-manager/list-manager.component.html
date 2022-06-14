@@ -1,0 +1,6 @@
+
+<app-input-button-unit (submit)="addItem($event)"></app-input-button-unit>
+
+<div *ngFor="let element of todoList">
+  <app-todo-item [item] = "element"></app-todo-item>
+</div>
