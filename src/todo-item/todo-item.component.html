@@ -1,5 +1,10 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
 <div class ="todo-item">
 <input type="checkbox" class="todo-checkbox" (click)="completeItem()" [checked]="item.completed"/>
  <span class="todo-title" [ngClass]="{'todo-complete': item.completed}" > {{item.title}} </span>
+ <span *ngIf="fav" class="material-icons active" (click)="favClicked()"> star </span>
+ <span *ngIf ="!fav" class="material-icons" (click)="favClicked()"> star </span>
 <button type="button" class="btn-red" (click)="removeItem()">remove</button>
 </div>

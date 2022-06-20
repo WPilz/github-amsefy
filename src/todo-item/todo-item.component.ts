@@ -10,6 +10,9 @@ export class TodoItemComponent implements OnInit {
   @Input() item: TodoItem;
   @Output() remove: EventEmitter<TodoItem> = new EventEmitter<TodoItem>();
   @Output() update: EventEmitter<any> = new EventEmitter<any>();
+
+  fav: boolean;
+
   constructor() { }
 
 
@@ -21,6 +24,14 @@ export class TodoItemComponent implements OnInit {
 
   removeItem(){
     this.remove.emit(this.item);
+  }
+
+  favClicked(){
+    if(this.fav){
+      this.fav = false;
+    } else{
+      this.fav = true;
+    }
   }
 
 }
