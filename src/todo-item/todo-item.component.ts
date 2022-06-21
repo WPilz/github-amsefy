@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, DoCheck } from '@angular/core';
 import { TodoItem } from '../app/todo-item';
 
 @Component({
@@ -11,10 +11,10 @@ export class TodoItemComponent implements OnInit {
   @Output() remove: EventEmitter<TodoItem> = new EventEmitter<TodoItem>();
   @Output() update: EventEmitter<any> = new EventEmitter<any>();
 
-  fav: boolean;
+ 
 
   constructor() { }
-
+  fav: boolean;
 
   ngOnInit() {
   }
@@ -26,12 +26,14 @@ export class TodoItemComponent implements OnInit {
     this.remove.emit(this.item);
   }
 
-  favClicked(){
-    if(this.fav){
-      this.fav = false;
-    } else{
-      this.fav = true;
-    }
+  favItem(){
+    console.log("in favItem()");
+    this.update.emit({item: this.item, changes: {fav: !this.item.fav}});
+    this.fav = this.item.fav; 
+    console.log(this.item.fav + " fav: " + this.fav) ;
+  }
+  getFav(){
+    return this.fav;
   }
 
 }

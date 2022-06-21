@@ -37,10 +37,36 @@ ol, ul {
 
 .btn-red {
   background: red;
+  color: #fff;
+  padding: 3px 10px;
+  margin: 0 0 0 3px;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  line-height: 24px;
+  cursor: pointer;
+  vertical-align: bottom;
 }
 
 .btn-red:hover {
   background: darkred;
+}
+
+.btn-pink {
+  background: rgb(138, 18, 118);
+  color: #fff;
+  padding: 3px 10px;
+  margin: 0 0 0 3px;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  line-height: 24px;
+  cursor: pointer;
+  vertical-align: bottom;
+}
+
+.btn-pink:hover {
+  background: rgb(110, 4, 69);
 }
 
 .app-title {

@@ -10,6 +10,7 @@ import { TodoListService } from '../todo-list.service';
 })
 export class ListManagerComponent implements OnInit {
   todoList: TodoItem[] = [];
+  showList: TodoItem[] = [];
   constructor(private todoListService: TodoListService) {
   
    }
@@ -26,7 +27,10 @@ export class ListManagerComponent implements OnInit {
   updateItem(item, changes){
     this.todoListService.updateItem(item, changes);
   }
- 
+  showFavs(filter){
+    if(filter) this.showList = this.todoList.filter(e => e.fav);
+    else this.showList = this.todoList;
+  }
   }
 
 

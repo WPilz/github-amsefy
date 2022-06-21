@@ -46,4 +46,4 @@ text-decoration: line-through;
   font-feature-settings: 'liga';
 }
 
-.material-icons.active { color: #f3be10e0; }
+.material-icons.active { color: #f3be10e0; text-decoration-color: chocolate; }
